@@ -14,7 +14,7 @@ Dit project werkt alleen als je Laragon 6 draait met PHP 8.1.x en MySQL 8.x. Geb
 
 ### Repo werkend krijgen
 
-1. Clone de repo naar je lokale pc, zorg dat de repo komt in C:\laragon\www\4s_manuals
+1. Fork de repo daarna Clone de repo naar je lokale pc, zorg dat de repo komt in C:\laragon\www\4s_manuals
 2. Run in cmd `composer install`
 3. Run in cmd `npm install`
 4. Kopieer .env.example naar .env (niet hernoemen, want de .example moet je voor je teamgenoten blijven bestaan)
