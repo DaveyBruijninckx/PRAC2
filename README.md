@@ -16,16 +16,18 @@ Dit project werkt alleen als je Laragon 6 draait met PHP 8.1.x en MySQL 8.x. Geb
 
 1. Clone de repo naar je lokale pc, zorg dat de repo komt in C:\laragon\www\4s_manuals
 2. Run in cmd `composer install`
-3. Kopieer .env.example naar .env (niet hernoemen, want de .example moet je voor je teamgenoten blijven bestaan)
-4. Run `php artisan key:generate`
+3. Run in cmd `npm install`
+4. Kopieer .env.example naar .env (niet hernoemen, want de .example moet je voor je teamgenoten blijven bestaan)
+5. Run `php artisan key:generate`
 6. Run `php artisan migrate`
 7. Als het script vraagt of er een database aangemaakt moet worden, kies dan yes.
 8. Nu staat de structuur van je database. Je kunt nu de testdata importeren om fatsoenlijk met de app te werken:
     * Ga in phpMyAdmin naar de database _4s_manuals_
     * Ga naar importeren en kies het _4s_manuals.sql_ bestand uit de hoofdmap van je project
     * Importeer de data
-9. Open het Laragon venster en klik op stop, en daarna weer op start all. Als er een windows beveiligingsvenster opent, klik dan op ja. 
-10. Ga naar 4s_manuals.test
+9. Open het Laragon of Herd venster en klik op stop, en daarna weer op start all. Als er een windows beveiligingsvenster opent, klik dan op ja.
+10. Run in cmd `npm run dev`
+11. Ga naar 4s_manuals.test
 
 
 
