@@ -1,9 +1,11 @@
 <x-layouts.app>
 
     <x-slot:introduction_text>
-        <p><img src="img/afbl_logo.png" align="right" width="100" height="100">{{ __('introduction_texts.homepage_line_1') }}</p>
-        <p>{{ __('introduction_texts.homepage_line_2') }}</p>
-        <p>{{ __('introduction_texts.homepage_line_3') }}</p>
+        <div class="homepage-intro">
+            <p><img src="img/afbl_logo.png" align="right" width="100" height="100">{{ __('introduction_texts.homepage_line_1') }}</p>
+            <p>{{ __('introduction_texts.homepage_line_2') }}</p>
+            <p>{{ __('introduction_texts.homepage_line_3') }}</p>
+        </div>
     </x-slot:introduction_text>
 
     <h1>
@@ -19,7 +21,7 @@
     $chunk_size = ceil($size / $columns);
     ?>
 
-    <div class="container">
+    <div class="container brand-list">
         <!-- Example row of columns -->
         <div class="row">
 
