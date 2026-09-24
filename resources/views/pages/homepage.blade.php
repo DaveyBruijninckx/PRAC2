@@ -2,6 +2,7 @@
 
     <x-slot:introduction_text>
         <div class="homepage-intro">
+            <p>{{ $name }} {{ $surname }}</p>
             <p><img src="img/afbl_logo.png" align="right" width="100" height="100">{{ __('introduction_texts.homepage_line_1') }}</p>
             <p>{{ __('introduction_texts.homepage_line_2') }}</p>
             <p>{{ __('introduction_texts.homepage_line_3') }}</p>

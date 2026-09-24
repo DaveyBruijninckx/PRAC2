@@ -11,7 +11,9 @@
     <div class="row">
 
         <div class="col-md-8">
-            <x-header/>
+            <x-header>
+                <x-slot:introduction_text>{{ $introduction_text ?? '' }}</x-slot:introduction_text>
+            </x-header>
 
             <ul class="breadcrumb">
                 <li><a href="/" title="{{ __('misc.home_alt') }}"
