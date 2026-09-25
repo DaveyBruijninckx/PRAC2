@@ -14,16 +14,19 @@
     <p>{{ __('introduction_texts.type_list', ['brand'=>$brand->name]) }}</p>
 
 
+    <div class="row type-grid">
         @foreach ($manuals as $manual)
-
-            @if ($manual->locally_available)
-                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
-                ({{$manual->filesize_human_readable}})
-            @else
-                <a href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
-            @endif
-
-            <br />
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="type-grid-item">
+                    @if ($manual->locally_available)
+                        <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
+                        <small>({{$manual->filesize_human_readable}})</small>
+                    @else
+                        <a href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
+                    @endif
+                </div>
+            </div>
         @endforeach
+    </div>
 
 </x-layouts.app>
