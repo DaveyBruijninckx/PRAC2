@@ -1,10 +1,23 @@
 
 <footer>
 	© {{ __('misc.copyright') }}
+    <div>
+        <h2>Over ons</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id tellus ac justo vehicula tempus. Aenean scelerisque efficitur volutpat. Etiam eleifend eleifend dolor non varius. Integer quam nunc, maximus quis.</p>
+    </div>
+    <div>
+        <h2>Contact gegevens</h2>
+        <p>Telefoon nummer:</p>
+        <p>E-mail:</p>
+    </div>
+    <div>
+        <h2>Socials</h2>
+        <a href="">Lorem ipsum</a>
+    </div>
 </footer>
 
 
-<!-- analytics code -->              
+<!-- analytics code -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -19,10 +32,10 @@
 </script>
 <!-- Einde analytics code -->
 
-<script language="Javascript" type="text/javascript"> 
- 
- if (top.location!= self.location) { 
+<script language="Javascript" type="text/javascript">
+
+ if (top.location!= self.location) {
   top.location = self.location.href
- } 
- 
+ }
+
 </script>
