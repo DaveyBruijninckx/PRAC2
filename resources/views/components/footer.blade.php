@@ -9,6 +9,7 @@
         <h2>Contact gegevens</h2>
         <p>Telefoon nummer:</p>
         <p>E-mail:</p>
+        <p><a href="/contact/" title="Contact">Naar het contactformulier</a></p>
     </div>
     <div>
         <h2>Socials</h2>

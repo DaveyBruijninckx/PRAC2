@@ -27,6 +27,7 @@ Productcat:		/category/12/Computers/
 
 use App\Models\Brand;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\TypeController;
@@ -37,6 +38,10 @@ use App\Http\Controllers\LocaleController;
 
 // Homepage
 Route::get('/', [HomeController::class, 'home'])->name('home');
+
+// Contact
+Route::get('/contact/', [ContactController::class, 'show'])->name('contact');
+Route::post('/contact/', [ContactController::class, 'store']);
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);
