@@ -30,9 +30,13 @@ class ManualViewCountTest extends TestCase
         $url = "{$brandUrl}{$manual->id}/";
         $this->get($brandUrl)
             ->assertOk()
-            ->assertSee('href="' . $url . '"', false);
+            ->assertSee('href="' . $url . '"', false)
+            ->assertSee('class="manual-link-button"', false);
 
-        $this->get($url)->assertOk()->assertSee('Views: 1');
+        $this->get($url)
+            ->assertOk()
+            ->assertSee('Views: 1')
+            ->assertSee('class="manual-download-button"', false);
         $this->get($url)->assertOk()->assertSee('Views: 2');
 
         $this->assertDatabaseHas('manuals', [

@@ -10059,9 +10059,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 /* Merkpagina: grid met typenummers */
 .type-grid-item {
-    background-color: #e9ecef;
-    border-radius: 0.25rem;
-    padding: 0.5rem 0.75rem;
+    background-color: transparent;
+    padding: 0;
     margin-bottom: 1rem;
     height: calc(100% - 1rem);
     word-break: break-word;
@@ -10080,6 +10079,69 @@ a.text-dark:hover, a.text-dark:focus {
 .type-grid-item small {
     display: block;
     color: #6c757d;
+}
+
+.manual-download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    margin: 0.5rem 0 1rem;
+    padding: 0.65rem 1.1rem;
+    border: 1px solid #343a40;
+    border-radius: 0.25rem;
+    background-color: #343a40;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.manual-download-button:hover {
+    border-color: #212529;
+    background-color: #212529;
+    color: #fff;
+    text-decoration: none;
+}
+
+.manual-download-button:focus-visible {
+    outline: 3px solid rgba(52, 58, 64, 0.35);
+    outline-offset: 3px;
+}
+
+.manual-download-button:active {
+    background-color: #16191b;
+    border-color: #16191b;
+}
+
+.type-grid-item a.manual-link-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 2.75rem;
+    margin-bottom: 0.5rem;
+    padding: 0.65rem 0.85rem;
+    border: 0;
+    border-radius: 0.25rem;
+    background-color: #343a40;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.type-grid-item a.manual-link-button:hover {
+    background-color: #212529;
+    color: #fff;
+    text-decoration: none;
+}
+
+.type-grid-item a.manual-link-button:focus-visible {
+    outline: 3px solid rgba(52, 58, 64, 0.35);
+    outline-offset: 3px;
 }
 
 html,
