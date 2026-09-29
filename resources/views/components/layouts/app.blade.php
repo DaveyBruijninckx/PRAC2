@@ -3,11 +3,11 @@
 <head>
     <x-head/>
 </head>
-<body>
+<body class="site-layout">
 
 <x-navbar/>
 
-<div class="container">
+<main class="container site-main">
     <div class="row justify-content-center">
 
         <div class="col-md-8">
@@ -36,14 +36,10 @@
 
         </div>
 
-        <div class="row">
-            <x-footer/>
-        </div>
-
     </div>
+</main>
 
-
-</div>
+<x-footer/>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

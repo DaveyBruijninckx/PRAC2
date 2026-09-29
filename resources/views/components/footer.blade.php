@@ -1,20 +1,24 @@
 
-<footer>
-	© {{ __('misc.copyright') }}
-    <div>
+<footer class="site-footer">
+  <div class="container">
+    <p class="site-footer__copyright">© {{ __('misc.copyright') }}</p>
+    <div class="site-footer__columns">
+  <section>
         <h2>Over ons</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id tellus ac justo vehicula tempus. Aenean scelerisque efficitur volutpat. Etiam eleifend eleifend dolor non varius. Integer quam nunc, maximus quis.</p>
-    </div>
-    <div>
+  </section>
+  <section>
         <h2>Contact gegevens</h2>
         <p>Telefoon nummer:</p>
         <p>E-mail:</p>
         <p><a href="/contact/" title="Contact">Naar het contactformulier</a></p>
-    </div>
-    <div>
+  </section>
+  <section>
         <h2>Socials</h2>
         <a href="">Lorem ipsum</a>
+  </section>
     </div>
+  </div>
 </footer>
 
 
