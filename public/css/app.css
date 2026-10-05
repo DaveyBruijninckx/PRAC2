@@ -10144,6 +10144,55 @@ a.text-dark:hover, a.text-dark:focus {
     outline-offset: 3px;
 }
 
+.popular-manual-list {
+    max-width: 42rem;
+    margin: 0 auto 1.5rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.popular-manual-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 0.5rem;
+    padding: 0.7rem 0.9rem;
+    border-left: 4px solid #3490dc;
+    border-radius: 0.25rem;
+    background-color: #f1f3f5;
+}
+
+.popular-manual-rank {
+    color: #343a40;
+    font-weight: 700;
+    flex: 0 0 1.5rem;
+}
+
+.popular-manual-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
+.popular-manual-link {
+    color: #343a40;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.popular-manual-link:hover,
+.popular-manual-link:focus {
+    color: #2475b0;
+}
+
+.popular-manual-views {
+    color: #5b6268;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
 html,
 body.site-layout {
     min-height: 100%;
