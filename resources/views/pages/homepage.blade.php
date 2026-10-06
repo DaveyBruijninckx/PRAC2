@@ -9,6 +9,17 @@
         </div>
     </x-slot:introduction_text>
 
+    <h2>Meest bekeken manuals</h2>
+    <ol class="popular-manual-list">
+        @foreach($popularManuals as $manual)
+            <li>
+                <a class="popular-manual" href="/{{ $manual->brand_id }}/{{ $manual->brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/">
+                    {{ $manual->brand->name }}: {{ $manual->name }}
+                </a>
+            </li>
+        @endforeach
+    </ol>
+
     <h1>
         <x-slot:title>
             {{ __('misc.all_brands') }}
