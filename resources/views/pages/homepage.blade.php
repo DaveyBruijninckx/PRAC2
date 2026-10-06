@@ -13,6 +13,7 @@
     <ol class="popular-manual-list">
         @foreach($popularManuals as $manual)
             <li>
+                <span class="popular-manual-rank">{{ $loop->iteration }}.</span>
                 <a class="popular-manual" href="/{{ $manual->brand_id }}/{{ $manual->brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/">
                     {{ $manual->brand->name }}: {{ $manual->name }}
                 </a>

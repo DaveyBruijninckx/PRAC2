@@ -72,6 +72,10 @@ class ManualViewCountTest extends TestCase
         $response->assertSee('href="/' . $brand->id . '/Bosch/' . $manuals[12]->id . '/"', false);
         $content = $response->getContent();
         $this->assertSame(10, substr_count($content, 'class="popular-manual"'));
+        $this->assertSame(10, substr_count($content, 'class="popular-manual-rank"'));
+        foreach (range(1, 10) as $rank) {
+            $this->assertStringContainsString('<span class="popular-manual-rank">' . $rank . '.</span>', $content);
+        }
         $this->assertLessThan(strpos($content, 'brand-list'), strpos($content, 'class="popular-manual-list"'));
     }
 }
