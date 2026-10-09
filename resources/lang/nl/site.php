@@ -23,6 +23,10 @@ return [
     // Homepage
     'most_viewed_manuals' => "Meest bekeken handleidingen",
 
+    // Categorieen
+    'categories' => "Categorieën",
+    'category_brands_intro' => "Kies een merk binnen :category.",
+
     // Handleidingen
     'manuals_for' => "Handleidingen voor ':brand'",
     'view_manual_for' => "Bekijk handleiding voor ':brand'",

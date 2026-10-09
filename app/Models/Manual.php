@@ -14,6 +14,11 @@ class Manual extends Model
         return $this->belongsTo(Brand::class);
     }
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     // Returns the filesize in a human readable format
     public function getFilesizeHumanReadableAttribute(){
 

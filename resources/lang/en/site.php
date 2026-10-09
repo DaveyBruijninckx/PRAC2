@@ -23,6 +23,10 @@ return [
     // Homepage
     'most_viewed_manuals' => "Most viewed manuals",
 
+    // Categories
+    'categories' => "Categories",
+    'category_brands_intro' => "Choose a brand within :category.",
+
     // Manuals
     'manuals_for' => "Manuals for ':brand'",
     'view_manual_for' => "View manual for ':brand'",
