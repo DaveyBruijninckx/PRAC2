@@ -39,46 +39,37 @@
     </h1>
 
 
-    <?php
-    $size = count($brands);
-    $columns = 3;
-    $chunk_size = ceil($size / $columns);
-    ?>
+    @php
+        $brandsByLetter = $brands->groupBy(fn ($brand) => strtoupper(substr($brand->name, 0, 1)));
+        $lettersPerColumn = max(1, (int) ceil($brandsByLetter->count() / 3));
+    @endphp
+
+    <nav class="brand-alphabet" aria-label="Merken op letter">
+        @foreach(range('A', 'Z') as $letter)
+            @if($brandsByLetter->has($letter))
+                <a class="brand-letter" href="#brand-{{ $letter }}">{{ $letter }}</a>
+            @else
+                <span class="brand-letter brand-letter-disabled" aria-disabled="true">{{ $letter }}</span>
+            @endif
+        @endforeach
+    </nav>
 
     <div class="container brand-list">
-        <!-- Example row of columns -->
         <div class="row">
-
-            @foreach($brands->chunk($chunk_size) as $chunk)
+            @foreach($brandsByLetter->chunk($lettersPerColumn) as $chunk)
                 <div class="col-md-4">
-
-                    <ul>
-                        @foreach($chunk as $brand)
-
-                            <?php
-                            $current_first_letter = strtoupper(substr($brand->name, 0, 1));
-
-                            if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
-                                echo '</ul>
-						<h2>' . $current_first_letter . '</h2>
-						<ul>';
-                            }
-                            $header_first_letter = $current_first_letter
-                            ?>
-
-                            <li>
-                                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-
+                    @foreach($chunk as $letter => $letterBrands)
+                        <h2 id="brand-{{ $letter }}">{{ $letter }}</h2>
+                        <ul>
+                            @foreach($letterBrands as $brand)
+                                <li>
+                                    <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endforeach
                 </div>
-                <?php
-                unset($header_first_letter);
-                ?>
             @endforeach
-
         </div>
-
     </div>
 </x-layouts.app>

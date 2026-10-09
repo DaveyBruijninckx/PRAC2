@@ -10034,6 +10034,26 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /* Homepage: merkenlijst */
+.brand-alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.brand-letter {
+    min-width: 2rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.brand-letter-disabled {
+    color: #6c757d;
+}
+
 .brand-list {
     background-color: #e9ecef;
     border-radius: 0.25rem;
@@ -10045,6 +10065,7 @@ a.text-dark:hover, a.text-dark:focus {
     color: #343a40;
     border-bottom: 2px solid #3490dc;
     padding-bottom: 0.25rem;
+    scroll-margin-top: 1rem;
 }
 
 .brand-list a {
