@@ -5,7 +5,7 @@
     </x-slot:head>
 
     <x-slot:breadcrumb>
-        <li><a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/" alt="Manuals for '{{$brand->name}}'" title="Manuals for '{{$brand->name}}'">{{ $brand->name }}</a></li>
+        <li><a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/" alt="{{ __('site.manuals_for', ['brand' => $brand->name]) }}" title="{{ __('site.manuals_for', ['brand' => $brand->name]) }}">{{ $brand->name }}</a></li>
     </x-slot:breadcrumb>
 
 

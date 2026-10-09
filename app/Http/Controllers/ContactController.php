@@ -31,6 +31,6 @@ class ContactController extends Controller
 
         Storage::put('contact/contact_' . now()->format('Y-m-d_H-i-s') . '.txt', $content);
 
-        return redirect('/contact/')->with('success', 'Bedankt! Je bericht is verstuurd.');
+        return redirect('/contact/')->with('success', __('site.contact_success'));
     }
 }

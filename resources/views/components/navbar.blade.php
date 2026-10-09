@@ -5,7 +5,13 @@
         </div>
         <ul class="navbar-nav mr-3">
             <li class="nav-item">
-                <a class="nav-link" href="/contact/" title="Contact">Contact</a>
+                <a class="nav-link" href="/contact/" title="{{ __('site.contact') }}">{{ __('site.contact') }}</a>
+            </li>
+            <li class="nav-item {{ app()->getLocale() == 'nl' ? 'active' : '' }}">
+                <a class="nav-link" href="/language/nl/" title="Nederlands">NL</a>
+            </li>
+            <li class="nav-item {{ app()->getLocale() == 'en' ? 'active' : '' }}">
+                <a class="nav-link" href="/language/en/" title="English">EN</a>
             </li>
         </ul>
         <div id="navbar" class="form-inline">

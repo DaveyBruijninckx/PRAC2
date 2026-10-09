@@ -4,17 +4,17 @@
     <p class="site-footer__copyright">© {{ __('misc.copyright') }}</p>
     <div class="site-footer__columns">
   <section>
-        <h2>Over ons</h2>
+        <h2>{{ __('site.about_us') }}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id tellus ac justo vehicula tempus. Aenean scelerisque efficitur volutpat. Etiam eleifend eleifend dolor non varius. Integer quam nunc, maximus quis.</p>
   </section>
   <section>
-        <h2>Contact gegevens</h2>
-        <p>Telefoon nummer:</p>
-        <p>E-mail:</p>
-        <p><a href="/contact/" title="Contact">Naar het contactformulier</a></p>
+        <h2>{{ __('site.contact_details') }}</h2>
+        <p>{{ __('site.phone') }}:</p>
+        <p>{{ __('site.email') }}:</p>
+        <p><a href="/contact/" title="{{ __('site.to_contact_form') }}">{{ __('site.to_contact_form') }}</a></p>
   </section>
   <section>
-        <h2>Socials</h2>
+        <h2>{{ __('site.socials') }}</h2>
         <a href="">Lorem ipsum</a>
   </section>
     </div>

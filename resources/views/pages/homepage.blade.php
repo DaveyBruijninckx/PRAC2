@@ -9,7 +9,7 @@
         </div>
     </x-slot:introduction_text>
 
-    <h2>Meest bekeken manuals</h2>
+    <h2>{{ __('site.most_viewed_manuals') }}</h2>
     <ol class="popular-manual-list">
         @foreach($popularManuals as $manual)
             <li>

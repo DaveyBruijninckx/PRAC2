@@ -1,7 +1,7 @@
 <x-layouts.app>
 
     <x-slot:breadcrumb>
-        <li><a href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/" alt="Manuals for '{{$brand->name}}'" title="Manuals for '{{$brand->name}}'">{{ $brand->name }}</a></li>
+        <li><a href="/{{ $brand->id }}/{{ $brand->name_url_encoded }}/" alt="{{ __('site.manuals_for', ['brand' => $brand->name]) }}" title="{{ __('site.manuals_for', ['brand' => $brand->name]) }}">{{ $brand->name }}</a></li>
     </x-slot:breadcrumb>
 
     <h1>{{ $brand->name }}</h1>
