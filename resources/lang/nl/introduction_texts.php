@@ -16,6 +16,7 @@ return [
 'homepage_line_1' => "Op DownloadYourManual.com kun je snel en gemakkelijk handleidingen en gebruiksgidsen gratis bekijken of downloaden. We bieden handleidingen voor meer dan 400.000 apparaten van 4.000 merken.",
 'homepage_line_2' => "Of u nu een handleiding of gids bent kwijtgeraakt van uw apparaat, of dat u een tweedehands apparaat heeft gekocht, op DownloadYourManual kunt u altijd de handleiding gratis downloaden. Misschien wilt u de handleiding voor later gebruik opslaan zodat u deze altijd terug kunt vinden, in dat geval download u de handleiding direct gratis op DownloadYourManual.com.",
 'homepage_line_3' => "Vind snel de handleiding door het juiste merk hieronder te selecteren.",
+'type_list' => "Hieronder staan alle verschillende types van :brand. Kies je apparaat om de handleiding of gebruikersgids te downloaden.",
 'popular_manuals' => "Populairste handleidingen",
 'all_manuals' => "Alle handleidingen",
 'manual_views' => ":count weergaven",
