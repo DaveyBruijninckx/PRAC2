@@ -9,8 +9,6 @@
         </div>
     </x-slot:introduction_text>
 
-
-
     <h2>{{ __('site.categories') }}</h2>
     <p><a class="btn btn-primary" href="{{ route('categories') }}">{{ __('site.view_all_categories') }}</a></p>
 
@@ -32,7 +30,7 @@
         </x-slot:title>
     </h1>
 
-    <h2>{{ __('site.manuals') }}</h2>
+    <h2>Handleidingen</h2>
 
     <p>{{ __('site.brand_letter_intro') }}</p>
 

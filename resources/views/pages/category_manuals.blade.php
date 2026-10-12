@@ -14,7 +14,7 @@
         @foreach ($manuals as $manual)
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="type-grid-item">
-                    <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" title="{{ $manual->name }}">{{ $manual->name }}</a>
+                    <a class="manual-link-button" href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" title="{{ $manual->name }}">{{ $manual->name }}</a>
                 </div>
             </div>
         @endforeach

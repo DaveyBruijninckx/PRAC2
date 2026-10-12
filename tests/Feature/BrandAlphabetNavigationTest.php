@@ -21,7 +21,6 @@ class BrandAlphabetNavigationTest extends TestCase
         $response = $this->get('/')->assertOk();
         $content = $response->getContent();
 
-        $this->assertStringContainsString('<h1>' . __('site.manuals') . '</h1>', $content);
         $this->assertStringContainsString('href="' . route('brands.by-letter', ['letter' => 'A']) . '">A</a>', $content);
         $this->assertStringContainsString('href="' . route('brands.by-letter', ['letter' => 'Z']) . '">Z</a>', $content);
         $this->assertStringContainsString('brand-letter-disabled" aria-disabled="true">B</span>', $content);

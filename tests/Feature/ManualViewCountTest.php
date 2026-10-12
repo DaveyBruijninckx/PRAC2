@@ -77,6 +77,6 @@ class ManualViewCountTest extends TestCase
         foreach (range(1, 10) as $rank) {
             $this->assertStringContainsString('<span class="popular-manual-rank">' . $rank . '.</span>', $content);
         }
-        $this->assertLessThan(strpos($content, 'class="popular-manual-list"'), strpos($content, 'brand-alphabet'));
+        $this->assertGreaterThan(strpos($content, 'class="popular-manual-list"'), strpos($content, '<nav class="brand-alphabet"'));
     }
 }

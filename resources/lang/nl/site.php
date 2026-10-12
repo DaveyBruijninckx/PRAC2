@@ -21,7 +21,6 @@ return [
     'socials' => "Socials",
 
     // Homepage
-    'manuals' => "Handleidingen",
     'most_viewed_manuals' => "Meest bekeken handleidingen",
     'brand_letter_intro' => "Kies een letter om de merken te bekijken die daarmee beginnen. Op de merkpagina vind je de bijbehorende handleidingen.",
 
