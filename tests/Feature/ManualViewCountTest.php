@@ -36,6 +36,7 @@ class ManualViewCountTest extends TestCase
         $this->get($url)
             ->assertOk()
             ->assertSee('Views: 1')
+            ->assertSee('href="' . route('brands.by-letter', ['letter' => 'E']) . '">E</a>', false)
             ->assertSee('class="manual-download-button"', false);
         $this->get($url)->assertOk()->assertSee('Views: 2');
 
@@ -76,6 +77,6 @@ class ManualViewCountTest extends TestCase
         foreach (range(1, 10) as $rank) {
             $this->assertStringContainsString('<span class="popular-manual-rank">' . $rank . '.</span>', $content);
         }
-        $this->assertLessThan(strpos($content, 'brand-list'), strpos($content, 'class="popular-manual-list"'));
+        $this->assertLessThan(strpos($content, 'class="popular-manual-list"'), strpos($content, 'brand-alphabet'));
     }
 }

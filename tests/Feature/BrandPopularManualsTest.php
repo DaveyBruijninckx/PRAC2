@@ -44,6 +44,7 @@ class BrandPopularManualsTest extends TestCase
         $brandUrl = "/{$brand->id}/{$brand->getNameUrlEncodedAttribute()}/";
         $response = $this->get($brandUrl)->assertOk();
         $content = $response->getContent();
+        $this->assertStringContainsString('href="' . route('brands.by-letter', ['letter' => 'E']) . '">E</a>', $content);
         [$popularSection] = explode('<section id="all-manuals">', $content, 2);
         [, $allSection] = explode('<section id="all-manuals">', $content, 2);
 

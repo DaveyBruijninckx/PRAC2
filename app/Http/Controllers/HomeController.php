@@ -13,6 +13,10 @@ class HomeController extends Controller
     {
         $categories = Category::all()->sortBy('name');
         $brands = Brand::all()->sortBy('name');
+        $availableBrandLetters = $brands
+            ->map(fn ($brand) => strtoupper(substr($brand->name, 0, 1)))
+            ->unique()
+            ->values();
         $popularManuals = Manual::with('brand')
             ->orderByDesc('view_count')
             ->orderBy('id')
@@ -24,6 +28,7 @@ class HomeController extends Controller
         return view('pages.homepage')
             ->with('categories', $categories)
             ->with('brands', $brands)
+            ->with('availableBrandLetters', $availableBrandLetters)
             ->with('popularManuals', $popularManuals)
             ->with('name', $name)
             ->with('surname', $surname);

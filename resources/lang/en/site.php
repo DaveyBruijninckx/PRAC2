@@ -21,7 +21,9 @@ return [
     'socials' => "Socials",
 
     // Homepage
+    'manuals' => "Manuals",
     'most_viewed_manuals' => "Most viewed manuals",
+    'brand_letter_intro' => "Choose a letter to see the brands that start with it. You can find their manuals on each brand page.",
 
     // Categories
     'categories' => "Categories",

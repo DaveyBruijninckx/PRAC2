@@ -57,6 +57,11 @@ Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale
 Route::get('/category/{category_id}/{category_slug}/', [CategoryController::class, 'show']);
 Route::get('/category/{category_id}/{category_slug}/{brand_id}/{brand_slug}/', [CategoryController::class, 'brand']);
 
+// Brand listings by first letter
+Route::get('/{letter}', [BrandController::class, 'byLetter'])
+    ->where('letter', '[A-Za-z]')
+    ->name('brands.by-letter');
+
 // List of manuals for a brand
 Route::get('/{brand_id}/{brand_slug}/', [BrandController::class, 'show']);
 

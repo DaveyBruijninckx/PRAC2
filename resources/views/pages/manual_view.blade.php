@@ -5,6 +5,7 @@
     </x-slot:head>
 
     <x-slot:breadcrumb>
+        <li><a href="{{ route('brands.by-letter', ['letter' => strtoupper(substr($brand->name, 0, 1))]) }}">{{ strtoupper(substr($brand->name, 0, 1)) }}</a></li>
         <li><a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/" alt="{{ __('site.manuals_for', ['brand' => $brand->name]) }}" title="{{ __('site.manuals_for', ['brand' => $brand->name]) }}">{{ $brand->name }}</a></li>
         <li><a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/" alt="{{ __('site.manuals_for', ['brand' => $brand->name]) }}" title="{{ __('site.manuals_for', ['brand' => $brand->name]) }}">{{ $manual->name }}</a></li>
         <li><a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ __('site.view_manual_for', ['brand' => $brand->name]) }}" title="{{ __('site.view_manual_for', ['brand' => $brand->name]) }}">{{ __('site.view') }}</a></li>

@@ -9,6 +9,8 @@
         </div>
     </x-slot:introduction_text>
 
+
+
     <h2>{{ __('site.categories') }}</h2>
     <p><a class="btn btn-primary" href="{{ route('categories') }}">{{ __('site.view_all_categories') }}</a></p>
 
@@ -30,38 +32,17 @@
         </x-slot:title>
     </h1>
 
+    <h2>{{ __('site.manuals') }}</h2>
 
-    @php
-        $brandsByLetter = $brands->groupBy(fn ($brand) => strtoupper(substr($brand->name, 0, 1)));
-        $lettersPerColumn = max(1, (int) ceil($brandsByLetter->count() / 3));
-    @endphp
+    <p>{{ __('site.brand_letter_intro') }}</p>
 
     <nav class="brand-alphabet" aria-label="Merken op letter">
         @foreach(range('A', 'Z') as $letter)
-            @if($brandsByLetter->has($letter))
-                <a class="brand-letter" href="#brand-{{ $letter }}">{{ $letter }}</a>
+            @if($availableBrandLetters->contains($letter))
+                <a class="brand-letter" href="{{ route('brands.by-letter', ['letter' => $letter]) }}">{{ $letter }}</a>
             @else
                 <span class="brand-letter brand-letter-disabled" aria-disabled="true">{{ $letter }}</span>
             @endif
         @endforeach
     </nav>
-
-    <div class="container brand-list">
-        <div class="row">
-            @foreach($brandsByLetter->chunk($lettersPerColumn) as $chunk)
-                <div class="col-md-4">
-                    @foreach($chunk as $letter => $letterBrands)
-                        <h2 id="brand-{{ $letter }}">{{ $letter }}</h2>
-                        <ul>
-                            @foreach($letterBrands as $brand)
-                                <li>
-                                    <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endforeach
-                </div>
-            @endforeach
-        </div>
-    </div>
 </x-layouts.app>
