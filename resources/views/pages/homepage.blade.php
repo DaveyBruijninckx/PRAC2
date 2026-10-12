@@ -10,15 +10,7 @@
     </x-slot:introduction_text>
 
     <h2>{{ __('site.categories') }}</h2>
-    <div class="row type-grid">
-        @foreach($categories as $category)
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="type-grid-item">
-                    <a href="/category/{{ $category->id }}/{{ $category->slug }}/" title="{{ $category->name }}">{{ $category->name }}</a>
-                </div>
-            </div>
-        @endforeach
-    </div>
+    <p><a class="btn btn-primary" href="{{ route('categories') }}">{{ __('site.view_all_categories') }}</a></p>
 
     <h2>{{ __('site.most_viewed_manuals') }}</h2>
     <ol class="popular-manual-list">

@@ -39,6 +39,7 @@ use App\Http\Controllers\LocaleController;
 
 // Homepage
 Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/categories/', [CategoryController::class, 'index'])->name('categories');
 
 // Contact
 Route::get('/contact/', [ContactController::class, 'show'])->name('contact');

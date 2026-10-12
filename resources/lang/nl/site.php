@@ -25,6 +25,7 @@ return [
 
     // Categorieen
     'categories' => "Categorieën",
+    'view_all_categories' => "Bekijk alle categorieën",
     'category_brands_intro' => "Kies een merk binnen :category.",
 
     // Handleidingen

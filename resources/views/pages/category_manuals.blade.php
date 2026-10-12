@@ -1,6 +1,7 @@
 <x-layouts.app>
 
     <x-slot:breadcrumb>
+        <li><a href="{{ route('categories') }}" title="{{ __('site.categories') }}">{{ __('site.categories') }}</a></li>
         <li><a href="/category/{{ $category->id }}/{{ $category->slug }}/" title="{{ $category->name }}">{{ $category->name }}</a></li>
         <li><a href="/category/{{ $category->id }}/{{ $category->slug }}/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/" title="{{ $brand->name }}">{{ $brand->name }}</a></li>
     </x-slot:breadcrumb>

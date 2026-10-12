@@ -9,6 +9,14 @@ use App\Models\Manual;
 
 class CategoryController extends Controller
 {
+    public function index()
+    {
+        $categories = Category::all()->sortBy('name');
+
+        return view('pages.categories')
+            ->with('categories', $categories);
+    }
+
     // Stap 1: alle merken binnen een categorie
     public function show($category_id, $category_slug)
     {

@@ -25,6 +25,7 @@ return [
 
     // Categories
     'categories' => "Categories",
+    'view_all_categories' => "View all categories",
     'category_brands_intro' => "Choose a brand within :category.",
 
     // Manuals
