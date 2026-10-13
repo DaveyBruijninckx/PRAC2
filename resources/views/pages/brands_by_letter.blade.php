@@ -6,10 +6,10 @@
 
     <h1>{{ __('misc.all_brands') }} - {{ $letter }}</h1>
 
-    <ul class="brand-list">
+    <ul class="brand-list brand-list-grid">
         @foreach ($brands as $brand)
             <li>
-                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
+                <a class="brand-list-button" href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
             </li>
         @endforeach
     </ul>

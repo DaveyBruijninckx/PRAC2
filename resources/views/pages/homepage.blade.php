@@ -30,7 +30,7 @@
         </x-slot:title>
     </h1>
 
-    <h2>Handleidingen</h2>
+    <h2>{{ __('misc.all_brands') }}</h2>
 
     <p>{{ __('site.brand_letter_intro') }}</p>
 

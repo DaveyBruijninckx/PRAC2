@@ -42,7 +42,7 @@ class BrandAlphabetNavigationTest extends TestCase
             ->assertOk()
             ->assertSee('Bosch')
             ->assertSee('href="/" title="' . __('misc.all_brands') . '">' . __('misc.all_brands') . '</a>', false)
-            ->assertSee('href="/' . $brand->id . '/Bosch/"', false)
+            ->assertSee('class="brand-list-button" href="/' . $brand->id . '/Bosch/"', false)
             ->assertDontSee('Alpha Appliances');
     }
 
@@ -55,5 +55,18 @@ class BrandAlphabetNavigationTest extends TestCase
         $this->get('/b')
             ->assertOk()
             ->assertSee('Bosch');
+    }
+
+    public function test_homepage_brand_heading_uses_the_selected_language(): void
+    {
+        $this->withSession(['locale' => 'nl'])
+            ->get('/')
+            ->assertOk()
+            ->assertSee('<h2>' . __('misc.all_brands', [], 'nl') . '</h2>', false);
+
+        $this->withSession(['locale' => 'en'])
+            ->get('/')
+            ->assertOk()
+            ->assertSee('<h2>' . __('misc.all_brands', [], 'en') . '</h2>', false);
     }
 }
