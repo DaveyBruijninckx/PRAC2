@@ -18,6 +18,8 @@ return [
     'contact_details' => "Contactgegevens",
     'phone' => "Telefoonnummer",
     'to_contact_form' => "Naar het contactformulier",
+    'made_by' => "Gemaakt door",
+    'and' => "en",
     'socials' => "Socials",
 
     // Homepage

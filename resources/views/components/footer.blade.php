@@ -2,6 +2,7 @@
 <footer class="site-footer">
   <div class="container">
     <p class="site-footer__copyright">© {{ __('misc.copyright') }}</p>
+    <p class="site-footer__made-by">{{ __('site.made_by') }} Kenan, Davey {{ __('site.and') }} Cas</p>
     <div class="site-footer__columns">
   <section>
         <h2>{{ __('site.about_us') }}</h2>

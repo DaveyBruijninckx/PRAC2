@@ -18,6 +18,8 @@ return [
     'contact_details' => "Contact details",
     'phone' => "Phone number",
     'to_contact_form' => "Go to the contact form",
+    'made_by' => "Made by",
+    'and' => "and",
     'socials' => "Socials",
 
     // Homepage
